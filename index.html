@@ -16,11 +16,10 @@
       font-size: 0.9rem;
       margin: 0.2rem;
     }
-    .project {
+    .card {
       background-color: #1e1e1e;
+      border: none;
       border-radius: 0.5rem;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     }
     a.btn {
@@ -37,42 +36,77 @@
   </style>
 </head>
 <body>
-
   <div class="container">
     <header class="text-center mb-5">
       <h1>Vineetha Guntumadugu</h1>
       <p class="text-secondary">Java Developer</p>
     </header>
 
-    <section class="mb-4">
+    <section class="mb-5">
+      <h3>About Me</h3>
+      <p>I am a passionate Java Developer with hands-on experience in building scalable and secure enterprise applications. I specialize in backend development using Java and Spring Boot, and have strong frontend skills with React.js and Angular. I have deployed cloud-native solutions on AWS and implemented CI/CD pipelines for efficient delivery. I value clean code, good design practices, and collaboration with cross-functional teams to deliver high-quality software solutions.</p>
+    </section>
+
+    <section class="mb-5">
       <h3>Projects</h3>
+      <div class="row g-4">
 
-      <div class="project">
-        <h5>Sysco Enterprise App</h5>
-        <p><strong>Tech Stack:</strong> Spring Boot, React.js, PostgreSQL, AWS</p>
-        <p>This application supports Sysco’s food product management system. I led the transition from a monolithic architecture to microservices, significantly improving performance and modularity. I designed and implemented secure RESTful APIs for product and pricing management, used Swagger for interactive documentation, and integrated PostgreSQL for persistent storage. The frontend was built using React.js with Redux, implementing reusable components and dynamic filtering. The services were containerized with Docker and deployed to AWS, using EC2 for compute and RDS for storage, while Jenkins automated CI/CD processes. The platform now supports faster deployments and improved availability.</p>
-      </div>
+        <div class="col-md-6">
+          <div class="card p-3">
+            <h5>Sysco Enterprise App</h5>
+            <p><strong>Tech Stack:</strong> Spring Boot, React.js, PostgreSQL, AWS</p>
+            <ul>
+              <li>Led the migration from monolithic to microservices architecture.</li>
+              <li>Developed secure REST APIs for product and pricing modules.</li>
+              <li>Built dynamic UI with React.js and Redux for inventory management.</li>
+              <li>Implemented CI/CD using Jenkins and deployed to AWS with Docker.</li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="project">
-        <h5>BNSF Claims Processing System</h5>
-        <p><strong>Tech Stack:</strong> Angular 9, Spring Boot, PostgreSQL, AWS</p>
-        <p>The Claims Management System automates the submission and resolution of union worker disputes. I developed Angular components for multi-step workflows, real-time status updates using RxJS, and JWT-based secure access. On the backend, I created Spring Boot services that supported lifecycle phases such as submission, arbitration, and escalation. PostgreSQL was used with Spring Data JPA for managing structured claim data. The entire solution was deployed to AWS using EC2, and integrated with Jenkins for continuous integration and testing. This streamlined claim resolution processes and improved record transparency.</p>
-      </div>
+        <div class="col-md-6">
+          <div class="card p-3">
+            <h5>BNSF Claims Processing System</h5>
+            <p><strong>Tech Stack:</strong> Angular 9, Spring Boot, PostgreSQL, AWS</p>
+            <ul>
+              <li>Created Angular modules for claim submission and review workflows.</li>
+              <li>Built Spring Boot microservices for managing lifecycle and arbitration logic.</li>
+              <li>Deployed full-stack solution on AWS using EC2 and RDS.</li>
+              <li>Integrated secure JWT-based access and automated test coverage.</li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="project">
-        <h5>MidFirst Digital Banking Platform</h5>
-        <p><strong>Tech Stack:</strong> Angular 10, Spring Boot, PostgreSQL, OAuth2, AWS</p>
-        <p>I worked on enhancing the MidFirst Bank's online banking platform, redesigning dashboards and secure user workflows. I built reactive Angular forms for KYC validation, implemented token-based authentication via OAuth2, and integrated external APIs for credit checks. Backend services included payment processing and notification triggers, developed using Spring Boot and secured via Spring Security. PostgreSQL was used with Hibernate, including audit logs and transaction history. The solution was hosted on AWS with EC2, RDS, and S3, with operational monitoring via CloudWatch. The improvements enhanced the user experience and security of online banking features.</p>
-      </div>
+        <div class="col-md-6">
+          <div class="card p-3">
+            <h5>MidFirst Digital Banking Platform</h5>
+            <p><strong>Tech Stack:</strong> Angular 10, Spring Boot, PostgreSQL, OAuth2, AWS</p>
+            <ul>
+              <li>Redesigned user flows for seamless online and mobile banking.</li>
+              <li>Implemented secure OAuth2 authentication and KYC validation forms.</li>
+              <li>Integrated external APIs for credit and loan modules.</li>
+              <li>Used CloudWatch for monitoring and troubleshooting in AWS.</li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="project">
-        <h5>Kohl's E-Commerce Platform</h5>
-        <p><strong>Tech Stack:</strong> React.js, GraphQL, MongoDB, Kafka, Spring Boot</p>
-        <p>This e-commerce application supported real-time inventory updates and personalized shopping experiences. I created reusable React components for cart, checkout, and product filtering, and integrated GraphQL for optimized API calls. Kafka was used to handle asynchronous updates like cart actions and shipping notifications. On the backend, Spring Boot handled promotions, pricing logic, and session tracking, while MongoDB managed unstructured catalog and user behavior data. We deployed containerized services in Kubernetes, with CI/CD pipelines in Jenkins. The project improved load times and increased conversion rates during peak sales events.</p>
+        <div class="col-md-6">
+          <div class="card p-3">
+            <h5>Kohl's E-Commerce Platform</h5>
+            <p><strong>Tech Stack:</strong> React.js, GraphQL, MongoDB, Kafka, Spring Boot</p>
+            <ul>
+              <li>Enhanced cart and checkout experience with React and GraphQL.</li>
+              <li>Integrated Kafka for real-time product and inventory updates.</li>
+              <li>Built backend pricing engine using Spring Boot and MongoDB.</li>
+              <li>Deployed microservices using Docker and Kubernetes.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section class="mb-4">
+    <section class="mb-5">
       <h3>Technical Skills</h3>
       <div>
         <span class="badge bg-primary">Java</span>
@@ -89,7 +123,7 @@
       </div>
     </section>
 
-    <section class="mb-4">
+    <section class="mb-5">
       <h3>Resume</h3>
       <a href="Vineetha_Guntumadugu_Resume.pdf" class="btn btn-outline-light" download>Download My Resume (PDF)</a>
     </section>
@@ -102,6 +136,5 @@
       </div>
     </footer>
   </div>
-
 </body>
 </html>
