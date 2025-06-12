@@ -2,107 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vineetha Guntumadugu | Java Developer</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      padding-top: 4rem;
-      background-color: #f8f9fa;
-    }
-    .hero {
-      background-color: #343a40;
-      color: white;
+      background-color: #f4f6f8;
+      font-family: Arial, sans-serif;
       padding: 2rem 1rem;
-      text-align: center;
     }
-    .project-card {
-      transition: transform 0.2s ease;
+    .badge {
+      font-size: 0.9rem;
+      margin: 0.2rem;
     }
-    .project-card:hover {
-      transform: scale(1.02);
+    .project {
+      background-color: white;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .footer-icons a {
+      margin: 0 0.5rem;
+      color: #000;
+      text-decoration: none;
+    }
+    .footer-icons a:hover {
+      color: #0d6efd;
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <h1 class="display-5">Vineetha Guntumadugu</h1>
-    <p class="lead">Java Developer</p>
-    <nav>
-      <a href="#projects" class="text-light mx-2">Projects</a>
-      <a href="#skills" class="text-light mx-2">Skills</a>
-      <a href="#resume" class="text-light mx-2">Resume</a>
-    </nav>
-  </div>
+  <div class="container">
+    <header class="text-center mb-5">
+      <h1>Vineetha Guntumadugu</h1>
+      <p class="text-muted">Java Developer</p>
+    </header>
 
-  <div class="container my-5">
+    <section class="mb-4">
+      <h3>Projects</h3>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2 class="mb-4">Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card project-card">
-            <div class="card-body">
-              <h5 class="card-title">Sysco Enterprise App</h5>
-              <p class="card-text">Modernized legacy system into microservices with Spring Boot and React.js. Enabled scalable food product management with REST APIs and AWS deployment.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card project-card">
-            <div class="card-body">
-              <h5 class="card-title">BNSF Claims System</h5>
-              <p class="card-text">Claims processing platform using Angular and Spring Boot with lifecycle tracking and arbitration workflow management on AWS cloud.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card project-card">
-            <div class="card-body">
-              <h5 class="card-title">MidFirst Banking Platform</h5>
-              <p class="card-text">Secure digital banking interface with Angular, Spring Boot, and OAuth2 integration. Supported KYC, payments, and loan processing.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card project-card">
-            <div class="card-body">
-              <h5 class="card-title">Kohl’s E-Commerce</h5>
-              <p class="card-text">Built shopping features using React.js, MongoDB, and Kafka. Integrated with GraphQL and enabled responsive, analytics-ready UI.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card project-card">
-            <div class="card-body">
-              <h5 class="card-title">Virtusa Client Projects</h5>
-              <p class="card-text">Developed internal HR portals and dashboards with Java, Spring MVC, JSP, and AngularJS across telecom and banking clients.</p>
-            </div>
-          </div>
-        </div>
+      <div class="project">
+        <h5>Sysco Enterprise App</h5>
+        <p><strong>Tech Stack:</strong> Spring Boot, React.js, PostgreSQL, AWS</p>
+        <p>This application supports Sysco’s food product management system. I led the transition from a monolithic architecture to microservices, significantly improving performance and modularity. I designed and implemented secure RESTful APIs for product and pricing management, used Swagger for interactive documentation, and integrated PostgreSQL for persistent storage. The frontend was built using React.js with Redux, implementing reusable components and dynamic filtering. The services were containerized with Docker and deployed to AWS, using EC2 for compute and RDS for storage, while Jenkins automated CI/CD processes. The platform now supports faster deployments and improved availability.</p>
+      </div>
+
+      <div class="project">
+        <h5>BNSF Claims Processing System</h5>
+        <p><strong>Tech Stack:</strong> Angular 9, Spring Boot, PostgreSQL, AWS</p>
+        <p>The Claims Management System automates the submission and resolution of union worker disputes. I developed Angular components for multi-step workflows, real-time status updates using RxJS, and JWT-based secure access. On the backend, I created Spring Boot services that supported lifecycle phases such as submission, arbitration, and escalation. PostgreSQL was used with Spring Data JPA for managing structured claim data. The entire solution was deployed to AWS using EC2, and integrated with Jenkins for continuous integration and testing. This streamlined claim resolution processes and improved record transparency.</p>
+      </div>
+
+      <div class="project">
+        <h5>MidFirst Digital Banking Platform</h5>
+        <p><strong>Tech Stack:</strong> Angular 10, Spring Boot, PostgreSQL, OAuth2, AWS</p>
+        <p>I worked on enhancing the MidFirst Bank's online banking platform, redesigning dashboards and secure user workflows. I built reactive Angular forms for KYC validation, implemented token-based authentication via OAuth2, and integrated external APIs for credit checks. Backend services included payment processing and notification triggers, developed using Spring Boot and secured via Spring Security. PostgreSQL was used with Hibernate, including audit logs and transaction history. The solution was hosted on AWS with EC2, RDS, and S3, with operational monitoring via CloudWatch. The improvements enhanced the user experience and security of online banking features.</p>
+      </div>
+
+      <div class="project">
+        <h5>Kohl's E-Commerce Platform</h5>
+        <p><strong>Tech Stack:</strong> React.js, GraphQL, MongoDB, Kafka, Spring Boot</p>
+        <p>This e-commerce application supported real-time inventory updates and personalized shopping experiences. I created reusable React components for cart, checkout, and product filtering, and integrated GraphQL for optimized API calls. Kafka was used to handle asynchronous updates like cart actions and shipping notifications. On the backend, Spring Boot handled promotions, pricing logic, and session tracking, while MongoDB managed unstructured catalog and user behavior data. We deployed containerized services in Kubernetes, with CI/CD pipelines in Jenkins. The project improved load times and increased conversion rates during peak sales events.</p>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="my-5">
-      <h2 class="mb-3">Technical Skills</h2>
-      <p>Java, Spring Boot, React.js, Angular, PostgreSQL, MongoDB, Jenkins, Docker, AWS, Kafka, Redis</p>
+    <section class="mb-4">
+      <h3>Technical Skills</h3>
+      <div>
+        <span class="badge bg-primary">Java</span>
+        <span class="badge bg-warning text-dark">Spring Boot</span>
+        <span class="badge bg-danger">React.js</span>
+        <span class="badge bg-info text-dark">Angular</span>
+        <span class="badge bg-success">PostgreSQL</span>
+        <span class="badge bg-success">MongoDB</span>
+        <span class="badge bg-dark">Jenkins</span>
+        <span class="badge bg-secondary">Docker</span>
+        <span class="badge bg-primary">AWS</span>
+        <span class="badge bg-dark">Kafka</span>
+        <span class="badge bg-danger">Redis</span>
+      </div>
     </section>
 
-    <!-- Resume -->
-    <section id="resume" class="my-5">
-      <h2 class="mb-3">Resume</h2>
-      <a href="Vineetha_Guntumadugu_Resume.pdf" class="btn btn-primary" download>Download My Resume (PDF)</a>
+    <section class="mb-4">
+      <h3>Resume</h3>
+      <a href="Vineetha_Guntumadugu_Resume.pdf" class="btn btn-outline-primary" download>Download My Resume (PDF)</a>
     </section>
 
+    <footer class="text-center mt-5">
+      <div class="footer-icons">
+        <a href="mailto:guntumaduguvineetha@gmail.com">📧 Email</a>
+        <a href="https://github.com/VineethaGuntumadugu" target="_blank">🐙 GitHub</a>
+        <a href="https://www.linkedin.com/in/vineetha-guntumadugu" target="_blank">💼 LinkedIn</a>
+      </div>
+    </footer>
   </div>
-
-  <footer class="text-center py-4 bg-light">
-    <p>Contact: guntumaduguvineetha@gmail.com |
-      <a href="https://www.linkedin.com/in/vineetha-guntumadugu-14a56336a/" target="_blank">LinkedIn</a></p>
-  </footer>
 
 </body>
 </html>
